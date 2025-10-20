@@ -1,0 +1,44 @@
+<Annotations Target="studentlessons.Students">
+  <Annotation Term="UI.DraftRoot" />
+  <Annotation Term="Common.ValueListMapping">
+    <Record Type="Common.ValueListMappingType">
+      <PropertyValue Property="CollectionPath" String="Students"/>
+      <PropertyValue Property="SearchSupported" Bool="true"/>
+    </Record>
+  </Annotation>
+  <Annotation Term="UI.Facets">
+    <Collection>
+      <Record Type="UI.ReferenceFacet">
+        <PropertyValue Property="Label" String="General Info"/>
+        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#General"/>
+      </Record>
+      <Record Type="UI.ReferenceFacet">
+        <PropertyValue Property="Label" String="Payments"/>
+        <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#Payments"/>
+      </Record>
+    </Collection>
+  </Annotation>
+  <Annotation Term="UI.FieldGroup" Qualifier="General">
+    <Record Type="UI.FieldGroupType">
+      <PropertyValue Property="Label" String="General Info"/>
+      <PropertyValue Property="Data">
+        <Collection>
+          <PropertyPath>FirstName</PropertyPath>
+          <PropertyPath>LastName</PropertyPath>
+          <PropertyPath>Email</PropertyPath>
+        </Collection>
+      </PropertyValue>
+    </Record>
+  </Annotation>
+  <Annotation Term="UI.FieldGroup" Qualifier="Payments">
+    <Record Type="UI.FieldGroupType">
+      <PropertyValue Property="Label" String="Payments"/>
+      <PropertyValue Property="Data">
+        <Collection>
+          <PropertyPath>Status</PropertyPath>
+          <PropertyPath>toPayments</PropertyPath>
+        </Collection>
+      </PropertyValue>
+    </Record>
+  </Annotation>
+</Annotations>

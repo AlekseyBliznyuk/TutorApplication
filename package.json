@@ -1,0 +1,43 @@
+{
+  "name": "student-lessons",
+  "version": "1.0.0",
+  "description": "SAP CAP application for managing paid lessons for students",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@cap-js/hana": "^2",
+    "@sap/xsenv": "^3",
+    "@sap/xssec": "^3",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "cds run",
+    "watch": "cds watch",
+    "build": "cds build --clean",
+    "deploy": "cds deploy --to hana"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "model": [
+          "db"
+        ],
+        "credentials": {
+          "container": "tutorapphdi"
+        }
+      }
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    },
+    "odata": {
+      "version": "v4"
+    }
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.0.3",
+    "@sap/cds": "^9.4.3",
+    "@sap/cds-dk": "^9.4.1"
+  }
+}

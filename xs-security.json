@@ -1,0 +1,14 @@
+{
+  "xsappname": "student-lessons-xsuaa",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    { "name": "$XSAPPNAME.User", "description": "Default user scope" }
+  ],
+  "roles": [
+    {
+      "name": "StudentLessonsUser",
+      "description": "Can view and manage lessons and payments",
+      "scope-references": ["$XSAPPNAME.User"]
+    }
+  ]
+}
